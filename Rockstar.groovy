@@ -16,6 +16,7 @@ dependencies {
 }
 //
 /** then update: settings.gradle:
++ other libraries
 **/
 include 'greeting-library'
 /** then: 
