@@ -7,3 +7,5 @@ https://github.com/gradle/gradle/issues/4515
 
 // also, MS has open-sourced some of minecraft.java:
 // https://news.ycombinator.com/item?id=18156929
+
+// http://openjdk.java.net/groups/net/httpclient/intro.html
