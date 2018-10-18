@@ -12,7 +12,7 @@ public class JacksonTester {
     //map json to a class, in this case, "student"
     
     try {
-      Student student = mapper.readValue(jsonString, Dtudent.class);
+      Student student = mapper.readValue(jsonString, Student.class); //potentially replace with util.scanner's keyboard.next ?
       
       System.out.println(jsonString);
       
