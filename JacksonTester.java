@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JacksonTester {
-  public class static void main (String args [])//shouldn't the array be b4 args?{
+  public class static void main (String args [])/**shouldn't the array be b4 args?**/ {
     ObjectMapper mapper = new ObjectMapper();
     String jsonString = "{\"name\":\CommonName\", \"age\":42}";
     
