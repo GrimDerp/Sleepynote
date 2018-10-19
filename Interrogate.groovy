@@ -11,7 +11,7 @@ public class Interrogate {
     System.out.print( "Hello. Please enter a user name or handle." );
     name = keyboard.next();
     
-    System.out.print( "Hi, " + name + "! How od are you? " );
+    System.out.print( "Hi, " + name + "! How old are you? " );
     age = keyboard.nextInt();
     
     System.out.println( "So you're " + age + ", eh? That's not too terribly old." );
