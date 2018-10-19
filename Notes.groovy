@@ -1,10 +1,15 @@
+// add to sleepynote:
+https://hc.apache.org/httpcomponents-core-ga/httpcore/examples/org/apache/http/examples/HttpFileServer.java
+ 
+
+ 
 /**  issues between gradle && java 11:
 gradle fails to start with JDK 11 #4591
 https://github.com/gradle/gradle/issues/4515
-
  - resolved by installing newer versions of groovy & gradle
 **/
 
+ 
 // also, MS has open-sourced some of minecraft.java:
 // https://news.ycombinator.com/item?id=18156929
 
