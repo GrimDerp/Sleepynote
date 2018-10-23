@@ -1,7 +1,8 @@
 // add to sleepynote:
 https://hc.apache.org/httpcomponents-core-ga/httpcore/examples/org/apache/http/examples/HttpFileServer.java
  
-
+ // use the standard http connection, then serialize a json object
+https://stackoverflow.com/questions/7181534/http-post-using-json-in-java
  
 /**  issues between gradle && java 11:
 gradle fails to start with JDK 11 #4591
