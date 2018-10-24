@@ -9,7 +9,8 @@ gradle fails to start with JDK 11 #4591
 https://github.com/gradle/gradle/issues/4515
  - resolved by installing newer versions of groovy & gradle
 **/
-
+ //a really good one:
+https://o7planning.org/en/11207/simple-crud-example-with-java-restful-web-service
  
 // also, MS has open-sourced some of minecraft.java:
 // https://news.ycombinator.com/item?id=18156929
