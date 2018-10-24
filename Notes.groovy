@@ -16,3 +16,6 @@ https://o7planning.org/en/11207/simple-crud-example-with-java-restful-web-servic
 // https://news.ycombinator.com/item?id=18156929
 
 // http://openjdk.java.net/groups/net/httpclient/intro.html
+
+ Hypermedia As The Engine Of Application State (HATEOAS)
+Let your data formats drive state transitions in your applications.
