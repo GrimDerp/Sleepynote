@@ -30,7 +30,7 @@ function get(url) {
 }
 
 
-/*
+/*now to use it:
 get('story.json').then(function(response) {
   console.log("Success!", response);
 }, function(error) {
