@@ -1,0 +1,88 @@
+/*
+https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+*/
+
+if (!('indexedDB' in window)) {
+  console.log('This browser doesn\'t support IndexedDB');
+  return;
+}
+
+/* With IndexedDB you can create multiple databases with any names you choose. In general, there is just one database per app. To open a database, we use:
+
+idb.open(name, version, upgradeCallback)
+This method returns a promise that resolves to a database object. When using idb.open, you provide a name, version number, and an optional callback to set up the database.
+
+Here is an example of idb.open in context:
+*/
+
+(function() {
+  'use strict';
+
+  //check for support
+  if (!('indexedDB' in window)) {
+    console.log('This browser doesn\'t support IndexedDB');
+    return;
+  }
+
+  var dbPromise = idb.open('test-db1', 1);
+
+})();
+
+/*
+To ensure database integrity, object stores can only be created and removed in the callback function in idb.open. The callback receives an instance of UpgradeDB, a special object in the IDB Promised library that is used to create object stores. Call the createObjectStore method on UpgradeDB to create the object store:
+
+upgradeDb.createObjectStore('storeName', options);
+This method takes the name of the object store as well as a parameter object that lets us define various configuration properties for the object store.
+
+Below is an example of the createObjectStore method:
+*/
+
+(function() {
+  'use strict';
+
+  //check for support
+  if (!('indexedDB' in window)) {
+    console.log('This browser doesn\'t support IndexedDB');
+    return;
+  }
+
+  var dbPromise = idb.open('test-db2', 1, function(upgradeDb) {
+    console.log('making a new object store');
+    if (!upgradeDb.objectStoreNames.contains('firstOS')) {
+      upgradeDb.createObjectStore('firstOS');
+    }
+  });
+
+})();
+
+/*
+You could also use a key generator, such as autoIncrement. The key generator creates a unique value for every object added to the object store. By default, if we don't specify a key, IndexedDB creates a key and stores it separately from the data.
+
+upgradeDb.createObjectStore('notes', {autoIncrement:true});
+This example creates an object store called "notes" and sets the primary key to be assigned automatically as an auto incrementing number.
+
+upgradeDb.createObjectStore('logs', {keyPath: 'id', autoIncrement:true});
+This example is similar to the previous example, but this time the auto incrementing value is assigned to a property called "id".
+*/
+
+function() {
+  'use strict';
+
+  //check for support
+  if (!('indexedDB' in window)) {
+    console.log('This browser doesn\'t support IndexedDB');
+    return;
+  }
+
+  var dbPromise = idb.open('test-db3', 1, function(upgradeDb) {
+    if (!upgradeDb.objectStoreNames.contains('people')) {
+      upgradeDb.createObjectStore('people', {keyPath: 'email'});
+    }
+    if (!upgradeDb.objectStoreNames.contains('notes')) {
+      upgradeDb.createObjectStore('notes', {autoIncrement: true});
+    }
+    if (!upgradeDb.objectStoreNames.contains('logs')) {
+      upgradeDb.createObjectStore('logs', {keyPath: 'id', autoIncrement: true});
+    }
+  });
+})();
