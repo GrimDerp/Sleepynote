@@ -17,6 +17,16 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Required for Kotlin integration
         classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlin_version" // See https://kotlinlang.org/docs/reference/compiler-plugins.html#spring-support
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$spring_boot_version"
+        
+        // Room components
+implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
+annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomVersion"
+androidTestImplementation "android.arch.persistence.room:testing:$rootProject.roomVersion"
+
+// Lifecycle components
+implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
+annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
+        
     }
 }
 
