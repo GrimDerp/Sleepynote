@@ -18,4 +18,4 @@ public class ForgetfulNote {
   }
 }
 
-//next time gotta have somewhere to stuff all this input.
+//next time gotta have somewhere to stuff all this input. updated in the kotlin glitch version
